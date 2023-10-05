@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * function_name - Short description, single line
- * @parameterx: Description of parameter x
-(* a blank line
- * Description: Longer description of the function)?
-(* section header: Section description)*
- * Return: Description of the returned value
- */
+ * main - Entry point
+ *
+ * Description: A C program that prints with put function
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
