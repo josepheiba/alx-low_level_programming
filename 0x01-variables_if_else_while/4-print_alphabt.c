@@ -13,7 +13,7 @@ int main(void)
 	int n;
 
 	n = 97;
-	for (;n < 123; n++)
+	for (; n < 123; n++)
 	{
 	if (n != 101 && n != 113)
 	{
