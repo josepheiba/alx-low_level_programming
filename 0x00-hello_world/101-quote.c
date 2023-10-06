@@ -10,6 +10,7 @@
 
 int main(void)
 {
-	fwrite("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", sizeof(char), sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"), stdout);
+	char *quote="and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	fwrite(quote , sizeof(char), sizeof(quote), stdout);
 	return (1);
 }
