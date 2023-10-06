@@ -10,18 +10,18 @@
 
 int main(void)
 {
-        int n;
+	int n;
 
-        n = 0;
-        for (; n < 10; n++)
-        {
-        putchar(n + 48);
-        if (n < 9)
-                {
-                putchar(',');
-                putchar(' ');
-                }
-        }
-        putchar('\n');
-        return (0);
+	n = 0;
+	for (; n < 10; n++)
+	{
+	putchar(n + 48);
+	if (n < 9)
+		{
+		putchar(',');
+		putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
