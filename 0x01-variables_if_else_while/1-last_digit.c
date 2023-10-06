@@ -23,16 +23,16 @@ int main(void)
 	rest = n % 10;
 	/* my code */
 	if (rest > 5)
-        	{
-		printf("Last digit of %i is %i and is greater than 5\n", n, rest);
-        	}
+	{
+	printf("Last digit of %i is %i and is greater than 5\n", n, rest);
+	}
         else if (rest == 0)
-        	{
-		printf("Last digit of %i is %i and is 0\n", n, rest);
-        	}
+	{
+	printf("Last digit of %i is %i and is 0\n", n, rest);
+	}
         else if (rest < 6)
-        	{
-		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, rest);
-        	}
+	{
+	printf("Last digit of %i is %i and is less than 6 and not 0\n", n, rest);
+	}
 	return (0);
 }
