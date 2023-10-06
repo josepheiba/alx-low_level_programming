@@ -23,7 +23,6 @@ int main(void)
 		{
 			for (k = 0; k < 10; k++)
 			{
-	
 			if (i != j && i != k && j != k && i < j && j < k)
 			{
 				if (printed == 1)
