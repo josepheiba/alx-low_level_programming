@@ -8,7 +8,7 @@
 /**
  * main - Entry point
  *
- * Description: positive negative zero
+ * Description: last digimon
  *
  * Return: Always 0 (Success)
 */
