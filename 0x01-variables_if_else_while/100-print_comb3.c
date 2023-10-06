@@ -12,8 +12,6 @@ int main(void)
 {
 	int i;
 	int j;
-	int sum;
-	int suminvert;
 	int printed;
 
 	printed = 0;
@@ -22,9 +20,7 @@ int main(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-		sum = i * 10 + j;
-		suminvert = i + j * 10;
-		if (i != j && sum < suminvert)
+		if (i != j && i < j)
 		{
 			if (printed == 1)
 			{
