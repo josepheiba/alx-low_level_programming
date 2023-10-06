@@ -11,11 +11,18 @@
 int main(void)
 {
 	int n;
+	char c;
 
-	n = 0x0;
-	for (; n < 0x10; n++)
+	n = 0;
+	for (; n < 10; n++)
 	{
-	printf("%X", n);
+	printf("%i", n);
+	}
+
+	c = 'a';
+	for (; c < 'g'; c++)
+	{
+	printf("%c", c);
 	}
 	putchar('\n');
 	return (0);
