@@ -10,7 +10,7 @@ void print_times_table(int n)
 {
 	int i, j, k, l, m, times;
 
-	if ((n ^ 2) < 1000)
+	if ((n * n) < 1000)
 	{
 	for (i = 0; i < n + 1; i++)
 	{
