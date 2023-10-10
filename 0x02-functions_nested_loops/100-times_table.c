@@ -3,17 +3,9 @@
 /**
  * print_times_table - description
  * @n : int
+ * myfun - int
  * Return: 1 0
 */
-
-/**
- * myfun - Entry point
- *
- * Description: 'the program's description'
- * @parameter: describe the parameter
- *
- * Return: Always 0 (Success)
- */
 
 void myfun(int i, int j);
 
