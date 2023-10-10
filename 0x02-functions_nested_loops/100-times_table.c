@@ -27,11 +27,6 @@ void print_times_table(int n)
 	}
 }
 
-/**
-
- * Return: 1 0
-*/
-
 void myfun(int i, int j)
 {
 	int k, l, m, times;
