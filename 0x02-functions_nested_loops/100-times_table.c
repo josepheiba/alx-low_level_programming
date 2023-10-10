@@ -2,10 +2,19 @@
 
 /**
  * print_times_table - description
- * myfun - description
- * @n, @i : int
+ * @n : int
  * Return: 1 0
 */
+
+/**
+ * myfun - Entry point
+ *
+ * Description: 'the program's description'
+ * @parameter: describe the parameter
+ *
+ * Return: Always 0 (Success)
+ */
+
 void myfun(int i, int j);
 
 void print_times_table(int n)
