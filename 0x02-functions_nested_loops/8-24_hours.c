@@ -2,7 +2,6 @@
 
 /**
  * jack_bauer - description
- * @n: number
  * Return: 1 0
 */
 
