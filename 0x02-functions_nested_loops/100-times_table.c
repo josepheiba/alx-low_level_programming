@@ -2,16 +2,13 @@
 
 /**
  * print_times_table - description
- * @n : int
- * myfun - int
+ * @n : number
  * Return: 1 0
 */
 
-void myfun(int i, int j);
-
 void print_times_table(int n)
 {
-	int i, j;
+	int i, j, k, l, m, times;
 
 	if ((n * n) < 1000)
 	{
@@ -19,67 +16,39 @@ void print_times_table(int n)
 	{
 		for (j = 0; j < n + 1; j++)
 		{
-			myfun(i, j);
+			times = i * j;
+			l = times % 10;
+			k = (times - l) / 10;
+			m = (times - (k * 10) - l) / 100;
+			if (j == 0)
+			{
+				_putchar('0' + l);
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				if (m == 0)
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('0' + m);
+				}
+				if (k == 0)
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar('0' + k);
+				}
+				_putchar('0' + l);
+			}
 		}
+		j = 0;
 		_putchar('\n');
 	}
 	}
-}
-
-void myfun(int i, int j)
-{
-	int k, l, m, times;
-
-	times = i * j;
-			if (times < 10)
-			{
-				l = times % 10;
-				if (j == 0)
-				{
-				_putchar('0' + l);
-				}
-				else
-				{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + l);
-				}
-			}
-			else if (times < 100 && times > 9)
-			{
-				l = times % 10;
-				k = (times - l) / 10;
-				if (j == 0)
-				{
-				_putchar('0' + l);
-				}
-				else
-				{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + k);
-				_putchar('0' + l);
-				}
-			}
-			else if (times > 99)
-			{
-				l = times % 10;
-				k = ((times - l) / 10) % 10;
-				m = (times - (10 * k) - l) / 100;
-				if (j == 0)
-				{
-				_putchar('0' + l);
-				}
-				else
-				{
-				_putchar(',');
-				_putchar(' ');
-				_putchar('0' + m);
-				_putchar('0' + k);
-				_putchar('0' + l);
-				}
-			}
 }
