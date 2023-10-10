@@ -2,7 +2,7 @@
 
 /**
  * _islower - description
- * _islower - function
+ * _islower: value
  * @c: character
 */
 
