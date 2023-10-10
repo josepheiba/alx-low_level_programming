@@ -2,6 +2,9 @@
 
 /**
  * print_times_table - description
+ * myfun - description
+ * @i : int
+ * @j : int
  * @n : int
  * Return: 1 0
 */
@@ -25,9 +28,7 @@ void print_times_table(int n)
 }
 
 /**
- * myfun - description
- * @i : int
- * @j : int
+
  * Return: 1 0
 */
 
