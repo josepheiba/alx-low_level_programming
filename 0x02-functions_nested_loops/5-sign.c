@@ -8,19 +8,21 @@
 
 int print_sign(int n)
 {
+	char pmz[] = "+-0";
+
 	if (n > 0)
 	{
+		_putchar(pmz[0]);
 		return (1);
-		_putchar('+');
 	}
 	else if (n < 0)
 	{
+		_putchar(pmz[1]);
 		return (-1);
-		_putchar('-');
 	}
 	else
 	{
+		_putchar(pmz[2]);
 		return (0);
-		_putchar('0');
 	}
 }
