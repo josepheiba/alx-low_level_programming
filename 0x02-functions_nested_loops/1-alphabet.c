@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
 */
 
-int print_alphabet(void)
+void print_alphabet(void)
 {
 	char word[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
@@ -20,5 +20,4 @@ int print_alphabet(void)
 		i++;
 	}
 	_putchar('\n');
-	return (0);
 }
