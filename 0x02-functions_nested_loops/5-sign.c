@@ -2,7 +2,7 @@
 
 /**
  * print_sign - description
- * @c: character
+ * @n: number
  * Return: 1 0
 */
 
