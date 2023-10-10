@@ -10,7 +10,6 @@ void print_alphabet_x10(void)
 	int i, j;
 
 	i = 0;
-	
 	for (j = 0; j < 10; j++)
 	{
 	while (word[i] != '\0')
