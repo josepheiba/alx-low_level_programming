@@ -3,9 +3,7 @@
 /**
  * print_times_table - description
  * myfun - description
- * @i : int
- * @j : int
- * @n : int
+ * @n, @i : int
  * Return: 1 0
 */
 void myfun(int i, int j);
