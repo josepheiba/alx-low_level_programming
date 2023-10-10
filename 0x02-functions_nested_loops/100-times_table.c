@@ -8,7 +8,7 @@
 
 void print_times_table(int n)
 {
-	int i, j, k, l, times;
+	int i, j, k, l, m, times;
 
 	for (i = 0; i < n + 1; i++)
 	{
@@ -44,6 +44,24 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar('0' + k);
+				_putchar('0' + l);
+				}
+			}
+			else if (times > 100)
+			{
+				l = times % 10;
+				k = ((times - l) / 10) % 10;
+				m = (times - 10 * k - l) / 100;
+				if (j == 0)
+				{
+				_putchar('0' + l);
+				}
+				else
+				{
+				_putchar(',');
+				_putchar(' ');
+				_putchar('0' + m);
 				_putchar('0' + k);
 				_putchar('0' + l);
 				}
