@@ -2,6 +2,8 @@
 
 /**
  * _islower - description
+ * _islower
+ * c is character
 */
 
 int _islower(int c)
