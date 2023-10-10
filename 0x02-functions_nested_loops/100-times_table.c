@@ -5,10 +5,11 @@
  * @n : int
  * Return: 1 0
 */
+void myfun(int i, int j);
 
 void print_times_table(int n)
 {
-	int i, j, k, l, m, times;
+	int i, j;
 
 	if ((n * n) < 1000)
 	{
@@ -16,7 +17,17 @@ void print_times_table(int n)
 	{
 		for (j = 0; j < n + 1; j++)
 		{
-			times = i * j;
+			myfun(i, j);
+		}
+		_putchar('\n');
+	}
+	}
+}
+
+void myfun(int i, int j)
+{
+	int k, l, m, times;
+	times = i * j;
 			if (times < 10)
 			{
 				l = times % 10;
@@ -68,8 +79,4 @@ void print_times_table(int n)
 				_putchar('0' + l);
 				}
 			}
-		}
-		_putchar('\n');
-	}
-	}
 }
