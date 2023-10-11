@@ -18,8 +18,6 @@ void print_times_table(int n)
 		{
 			times = i * j;
 			l = times % 10;
-			k = (times - l) / 10;
-			m = (times - (k * 10) - l) / 100;
 			if (j == 0)
 			{
 				_putchar('0' + l);
@@ -28,21 +26,23 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (m == 0)
+				if (times > 99)
 				{
-					_putchar(' ');
-				}
-				else
-				{
+					m = (((times - l) / 10) - ((times - l) / 10) % 10) / 10;
 					_putchar('0' + m);
 				}
-				if (k == 0)
+				else
 				{
 					_putchar(' ');
 				}
+				if (times > 9)
+				{
+					k = ((times - l) / 10) % 10;
+					_putchar('0' + k);
+				}
 				else
 				{
-					_putchar('0' + k);
+					_putchar(' ');
 				}
 				_putchar('0' + l);
 			}
