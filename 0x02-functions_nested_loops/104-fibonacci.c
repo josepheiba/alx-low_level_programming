@@ -12,7 +12,7 @@ int main(void)
 
 	nbr1 = 0;
 	nbr2 = 1;
-	for (i = 0; i < 49; i++)
+	for (i = 0; i < 92; i++)
 	{
 		nbrnew = nbr1 + nbr2;
 		nbr1 = nbr2;
@@ -23,7 +23,7 @@ int main(void)
 	n21 = nbr2 / 10000000000;
 	n12 = nbr1 % 10000000000;
 	n22 = nbr2 % 10000000000;
-	for (i = 50; i < 99; i++)
+	for (i = 93; i < 99; i++)
 	{
 		ln = n11 + n21;
 		rn = n12 + n22;
