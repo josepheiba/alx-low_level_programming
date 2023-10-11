@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	long long nbr1, nbr2, nbrnew;
+	double nbr1, nbr2, nbrnew;
 	int i;
 
 	nbr1 = 0;
@@ -19,10 +19,10 @@ int main(void)
 		nbr2 = nbrnew;
 		if (i < 49)
 		{
-		printf("%llu, ", nbrnew);
+		printf("%f, ", nbrnew);
 		}
 		else
-		printf("%llu", nbrnew);
+		printf("%f", nbrnew);
 	}
 	printf("\n");
 	return (0);
