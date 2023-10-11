@@ -17,12 +17,12 @@ int main(void)
 		nbrnew = nbr1 + nbr2;
 		nbr1 = nbr2;
 		nbr2 = nbrnew;
-		if (i < 49)
+		if (i < 97)
 		{
-		printf("%f, ", nbrnew);
+		printf("%.0f, ", nbrnew);
 		}
 		else
-		printf("%f", nbrnew);
+		printf("%.0f", nbrnew);
 	}
 	printf("\n");
 	return (0);
