@@ -25,6 +25,6 @@ int main(void)
 			sum = sum + nbrnew;
 		}
 	}
-	printf("\n");
+	printf("%i\n", sum);
 	return (0);
 }
