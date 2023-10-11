@@ -12,7 +12,7 @@ int main(void)
 
 	nbr1 = 0;
 	nbr2 = 1;
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 49; i++)
 	{
 		nbrnew = nbr1 + nbr2;
 		nbr1 = nbr2;
