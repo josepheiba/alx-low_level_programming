@@ -40,7 +40,7 @@ int main(void)
 		n12 = n22;
 		n21 = ln;
 		n22 = rn;
-	}	
+	}
 	printf("\n");
 	return (0);
 }
