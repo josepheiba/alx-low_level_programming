@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	double nbr1, nbr2, nbrnew;
+	unsigned long nbr1, nbr2, nbrnew;
 	int i;
 
 	nbr1 = 0;
@@ -19,10 +19,10 @@ int main(void)
 		nbr2 = nbrnew;
 		if (i < 97)
 		{
-		printf("%.0f, ", nbrnew);
+		printf("%lu, ", nbrnew);
 		}
 		else
-		printf("%.0f", nbrnew);
+		printf("%lu", nbrnew);
 	}
 	printf("\n");
 	return (0);
