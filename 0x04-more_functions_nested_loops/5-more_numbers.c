@@ -3,7 +3,6 @@
 /**
  * _printnum - check the code.
  * @c : value
- * Return: 0 1
  */
 
 void _printnum(int c)
@@ -30,8 +29,6 @@ void _printnum(int c)
 
 /**
  * more_numbers - check the code.
- *
- * Return: 0 1
  */
 
 void more_numbers(void)
