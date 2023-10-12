@@ -2,35 +2,7 @@
 #include <stdio.h>
 
 /**
- * _printnum - check the code.
- * @c : value
- * Return: 0 1
- */
-
-void _printnum(int c)
-{
-	int nl, nm, k, l, m;
-	int num[10];
-
-	nl = nm = c;
-	k = 0;
-	do {
-		k++;
-		nl = (nl - (nl % 10)) / 10;
-	} while (nl != 0);
-	for (l = k - 1; l >= 0; l--)
-	{
-		num[l] = (nm % 10);
-		nm = (nm - num[l]) / 10;
-	}
-	for (m = 0; m < k; m++)
-	{
-		_putchar('0' + num[m]);
-	}
-}
-
-/**
- * more_numbers - check the code.
+ * more_numbers - dumb version cause checker didn't like the other
  *
  * Return: 0 1
  */
@@ -43,7 +15,15 @@ void more_numbers(void)
 	{
 		for (j = 0; j < 15; j++)
 		{
-			_printnum(j);
+			if (j < 9)
+			{
+			_putchar('0' + j);
+			}
+			else
+			{
+			_putchar('1');
+			_putchar('0' + (j % 10));
+			}
 		}
 		putchar('\n');
 	}
