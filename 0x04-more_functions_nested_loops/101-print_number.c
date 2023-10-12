@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	int nl, nm, k, l, m;
-	int num[10];
+	int num[100000];
 
 	if (n < 0)
 	{
