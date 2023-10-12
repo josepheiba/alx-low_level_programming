@@ -19,5 +19,4 @@ void more_numbers(void)
 		}
 		putchar('\n');
 	}
-	return (0);
 }
