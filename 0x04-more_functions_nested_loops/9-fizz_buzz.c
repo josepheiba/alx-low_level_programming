@@ -18,9 +18,9 @@ int main(void)
 		else if (i % 3 == 0)
 			printf(" Fizz");
 		else if (i == 1)
-			printf("%i", i);
+			printf("%d", i);
 		else
-			printf(" %i", i);
+			printf(" %d", i);
 	}
 	printf("\n");
 	return (0);
