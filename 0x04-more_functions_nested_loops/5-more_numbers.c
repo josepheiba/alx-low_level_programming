@@ -5,12 +5,24 @@
  * @c : value
  */
 
-void _printnum(int c)
+
+
+/**
+ * more_numbers - check the code.
+ */
+
+void more_numbers(void)
 {
+	int i, j;
+
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j < 15; j++)
+		{
 	int nl, nm, k, l, m;
 	int num[10];
 
-	nl = nm = c;
+	nl = nm = j;
 	k = 0;
 	do {
 		k++;
@@ -25,21 +37,6 @@ void _printnum(int c)
 	{
 		_putchar('0' + num[m]);
 	}
-}
-
-/**
- * more_numbers - check the code.
- */
-
-void more_numbers(void)
-{
-	int i, j;
-
-	for (i = 0; i < 10; i++)
-	{
-		for (j = 0; j < 15; j++)
-		{
-			_printnum(j);
 		}
 		putchar('\n');
 	}
