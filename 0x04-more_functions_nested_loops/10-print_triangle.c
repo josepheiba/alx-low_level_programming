@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - check code.
+ * print_triangle - check code.
  *
  * @size : variable
  */
