@@ -12,6 +12,10 @@ int oss(int e, int x)
 	int q, E;
 
 	E = e;
+	if (x == 0)
+		return (1);
+	else if (x == 1)
+		return (e);
 	for (q = 1; q < x; q++)
 	{
 		E = E * e;
@@ -41,11 +45,10 @@ void print_number(int n)
 		k++;
 		nl = (nl - (nl % 10)) / 10;
 	} while (nl != 0);
-	for (m = k; m > 1; m--)
+	for (m = k; m > 0; m--)
 	{
 		nm = n / (oss(10, m - 1));
 		nm = nm % 10;
 		_putchar('0' + nm);
 	}
-	_putchar('0' + (n % 10));
 }
