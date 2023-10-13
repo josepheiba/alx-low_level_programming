@@ -1,6 +1,29 @@
 #include "main.h"
 
 /**
+ * oss - check the code.
+ * @e : value
+ * @x : value
+ * Return: int
+ */
+
+int oss(int e, int x)
+{
+	int q, E;
+
+	E = e;
+	if (x == 0)
+		return (1);
+	else if (x == 1)
+		return (e);
+	for (q = 1; q < x; q++)
+	{
+		E = E * e;
+	}
+	return (E);
+}
+
+/**
  * print_number - check the code.
  * @n : value
  * Return: 0 1
@@ -8,19 +31,25 @@
 
 void print_number(int n)
 {
-	int num = n;
+	int nl, k, m;
+	unsigned int nm;
 
-	/*first check if its negative*/
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		n = -n;
 	}
 
-	/*print the first few digits*/
-	if ((num / 10) > 0)
-		print_number(num / 10);
-
-	/*print the last digit*/
-	_putchar((num % 10) + 48);
+	nl = nm = n;
+	k = 0;
+	do {
+		k++;
+		nl = (nl - (nl % 10)) / 10;
+	} while (nl != 0);
+	for (m = k; m > 0; m--)
+	{
+		nm = n / (oss(10, m - 1));
+		nm = nm % 10;
+		_putchar('0' + nm);
+	}
 }

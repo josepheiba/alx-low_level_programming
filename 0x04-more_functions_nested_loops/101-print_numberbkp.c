@@ -31,7 +31,8 @@ int oss(int e, int x)
 
 void print_number(int n)
 {
-	int nl, nm, k, m;
+	int nl, k, m;
+	unsigned int nm;
 
 	if (n < 0)
 	{
