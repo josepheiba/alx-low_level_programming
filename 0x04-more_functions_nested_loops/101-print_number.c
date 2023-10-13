@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - check the code.
- * @n : value
- * Return: 0 1
+ * oss - check the code.
+ * @e : value
+ * @x : value
+ * Return: int
  */
 
 int oss(int e, int x)
@@ -15,13 +16,18 @@ int oss(int e, int x)
 	{
 		E = E * e;
 	}
-	return E;
+	return (E);
 }
+
+/**
+ * print_number - check the code.
+ * @n : value
+ * Return: 0 1
+ */
 
 void print_number(int n)
 {
-	int nl, k, m;
-	unsigned int nm;
+	int nl, nm, k, m;
 
 	if (n < 0)
 	{
