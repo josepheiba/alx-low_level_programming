@@ -1,12 +1,29 @@
 #include "main.h"
 
 /**
- * reset_to_98 - check code
- * @n: input
+ * _atoi - check code
+ * @s: input
  * Return: check function declaration
  */
 
-void reset_to_98(int *n)
+int _atoi(char *s)
 {
-	*n = 98;
+	int i, n, number, sign;
+
+	i = number = 0;
+	sign = 1;
+	while (s[i] != '\0')
+	{
+		if (s[i] == '-')
+			sign = -sign;
+		if (s[i] < 58 && s[i] > 47)
+		{
+			n = (int)s[i] - 48;
+			number = number * 10 + n;
+		if (s[i + 1] >= 58 || s[i + 1] <= 47)
+			break;
+		}
+		i++;
+	}
+	return (sign * number);
 }
