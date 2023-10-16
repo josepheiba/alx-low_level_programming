@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check code
+ * reset_to_98 - check code
  * @n: input
  * Return: check function declaration
  */
