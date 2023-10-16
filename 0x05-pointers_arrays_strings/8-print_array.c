@@ -10,6 +10,11 @@
 
 void print_array(int *a, int n)
 {
+	if n <= 0;
+	{
+		printf("\n");
+		return;
+	}
 	int i;
 
 	i = 0;
