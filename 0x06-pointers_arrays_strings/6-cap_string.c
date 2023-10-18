@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_istring - check code
+ * cap_string - check code
  * @s: input
  * Return: check function declaration
  */
@@ -10,7 +10,7 @@ char *cap_string(char *s)
 {
 	int i;
 
-	i = 0;
+	i = 0; 
 	while (s[i] != '\0')
 	{
 		if ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
