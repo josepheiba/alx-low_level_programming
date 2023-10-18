@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncopy - check code
+ * _strncpy - check code
  * @dest: input
  * @src: input
  * @n: input
