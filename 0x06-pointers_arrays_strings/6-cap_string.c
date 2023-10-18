@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_string - check code
+ * cap_istring - check code
  * @s: input
  * Return: check function declaration
  */
