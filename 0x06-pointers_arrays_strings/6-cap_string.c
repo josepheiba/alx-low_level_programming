@@ -10,7 +10,7 @@ char *cap_string(char *s)
 {
 	int i;
 
-	i = 0; 
+	i = 0;
 	while (s[i] != '\0')
 	{
 		if ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
@@ -20,6 +20,10 @@ char *cap_string(char *s)
 				&& (s[i + 1] < 123 && s[i + 1] > 96))
 		{
 			*(s + i + 1) -= 32;
+			if (s[i] == '\t')
+			{
+				s[i] = ' ';
+			}
 		}
 	i++;
 	}
