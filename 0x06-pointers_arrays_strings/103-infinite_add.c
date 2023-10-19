@@ -62,7 +62,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			sum = 0;
 		m++;
-		if (m > size_r - 1)
+		if (m == size_r)
 			return (0);
 		i--;
 		j--;
