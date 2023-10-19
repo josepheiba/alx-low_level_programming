@@ -1,6 +1,29 @@
 #include "main.h"
 
 /**
+ * strrev - check code
+ * @n: input
+ * Return: check function declaration
+ */
+
+void strrev(char *s)
+{
+	int i, n;
+	char tmp;
+
+	n = 0;
+	while (s[n] != '\0')
+		n++;
+	for (i = 0; i < n / 2; i++)
+	{
+		tmp = s[i];
+		s[i] = s[n - i - 1];
+		s[n - i - 1] = tmp;
+	}
+}
+
+
+/**
  * infinite_add - check code
  * @n1: input
  * @n2: input
@@ -11,9 +34,9 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, l, m, one, two, sum;
+	int i, j, m, one, two, sum;
 
-	i = j = k = m = sum = 0;
+	i = j = m = sum = 0;
 	while (n1[i] != '\0')
 	{
 		i++;
@@ -22,39 +45,29 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		j++;
 	}
-	if (i > j)
-		l = i;
-	else
-		l = j;
-	if (size_r > l + 1)
+	while (i >= 0 || j >= 0 || sum != 0)
 	{
-	for (k = 0; k < size_r; k++)
-	{
-		if (i - k - 1 >= 0)
-			one = (int)n1[i - k - 1] - 48;
+		if (i - 1 >= 0)
+			one = (int)n1[i - 1] - 48;
 		else
 			one = 0;
-		if (j - k - 1 >= 0)
-			two = (int)n2[j - k - 1] - 48;
+		if (j - 1 >= 0)
+			two = (int)n2[j - 1] - 48;
 		else
 			two = 0;
 		sum = sum + one + two;
-		r[l - k] = sum % 10 + '0';
+		r[m] = sum % 10 + '0';
 		if (sum > 9)
 			sum = (sum - (sum % 10)) / 10;
 		else
 			sum = 0;
-	}
-	r[l + 1] = '\0';
-	if (r[0] == '0')
-	{
-		do {
-		r[m] = r[m + 1];
 		m++;
-		} while (r[m] != '\0');
+		if (m > size_r - 1)
+			return (0);
+		i--;
+		j--;
 	}
+	r[m] = '\0';
+	strrev(r);
 	return (r);
-	}
-	else
-		return (0);
 }
