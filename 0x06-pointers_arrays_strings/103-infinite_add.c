@@ -11,9 +11,9 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, l, one, two, sum;
+	int i, j, k, l, m, one, two, sum;
 
-	i = j = k = sum = 0;
+	i = j = k = m = sum = 0;
 	while (n1[i] != '\0')
 	{
 		i++;
@@ -39,13 +39,20 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			two = 0;
 		sum = sum + one + two;
-		r[size_r - k - (size_r - l)] = sum % 10 + '0';
+		r[l - k] = sum % 10 + '0';
 		if (sum > 9)
 			sum = (sum - (sum % 10)) / 10;
 		else
 			sum = 0;
 	}
 	r[l + 1] = '\0';
+	if (r[0] == '0')
+	{
+		do {
+		r[m] = r[m + 1];
+		m++;
+		} while (r[m] != '\0');
+	}
 	return (r);
 	}
 	else
