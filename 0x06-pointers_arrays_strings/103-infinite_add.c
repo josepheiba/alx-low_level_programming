@@ -61,14 +61,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			sum = (sum - (sum % 10)) / 10;
 		else
 			sum = 0;
-		if (m >= size_r - 1)
+		if (m > size_r - 2)
 			return (0);
 		i--;
 		j--;
 		m++;
 	}
-	if (m == size_r)
-		return (0);
 	r[m] = '\0';
 	strrev(r);
 	return (r);
