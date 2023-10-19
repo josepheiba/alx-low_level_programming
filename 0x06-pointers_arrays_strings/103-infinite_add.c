@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			sum = 0;
 	}
-	r[l] = '\0';
+	r[l + 1] = '\0';
 	return (r);
 	}
 	else
