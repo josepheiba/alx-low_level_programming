@@ -31,8 +31,9 @@ void print_buffer(char *b, int size)
 		for (; i < k + ten; i++)
 		{
 			c = b[i];
-			if ((c < 32 || c > 132) && i < size)
+			if (c < 32 || c > 132)
 				c = '.';
+			if (i < size)
 			printf("%c", c);
 		}
 		printf("\n");
