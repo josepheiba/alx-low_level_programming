@@ -14,6 +14,11 @@ void print_buffer(char *b, int size)
 
 	i = 0x0;
 	ten = 0xa;
+	if (size < 1)
+	{
+		printf("\n");
+		return;
+	}
 	while (i < size)
 	{
 		printf("%08x: ", i);
@@ -31,7 +36,7 @@ void print_buffer(char *b, int size)
 		for (; i < k + ten; i++)
 		{
 			c = b[i];
-			if (c < 32 || c > 132)
+			if (c < 32 || c > 127)
 				c = '.';
 			if (i < size)
 			printf("%c", c);
