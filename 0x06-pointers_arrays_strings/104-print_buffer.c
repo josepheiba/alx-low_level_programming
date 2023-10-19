@@ -32,7 +32,7 @@ void print_buffer(char *b, int size)
 		{
 			c = b[i];
 			if ((c < 32 || c > 132) && i < size)
-				printf(".");
+				c = '.';
 			else if (i < size)
 				printf("%c", c);
 		}
