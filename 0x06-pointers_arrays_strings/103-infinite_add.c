@@ -1,75 +1,79 @@
 #include "main.h"
 
 /**
- * strrev - check code
- * @s: input
- * Return: check function declaration
+ * rev_string - reverse array
+ * @n: integer params
+ * Return: 0
  */
 
-void strrev(char *s)
+void rev_string(char *n)
 {
-	int i, n;
-	char tmp;
+	int i = 0;
+	int j = 0;
+	char temp;
 
-	n = 0;
-	while (s[n] != '\0')
-		n++;
-	for (i = 0; i < n / 2; i++)
+	while (*(n + i) != '\0')
 	{
-		tmp = s[i];
-		s[i] = s[n - i - 1];
-		s[n - i - 1] = tmp;
+		i++;
+	}
+	i--;
+
+	for (j = 0; j < i; j++, i--)
+	{
+		temp = *(n + j);
+		*(n + j) = *(n + i);
+		*(n + i) = temp;
 	}
 }
 
-
 /**
- * infinite_add - check code
- * @n1: input
- * @n2: input
- * @r: input
- * @size_r: input
- * Return: check function declaration
+ * infinite_add - add 2 numbers together
+ * @n1: text representation of 1st number to add
+ * @n2: text representation of 2nd number to add
+ * @r: pointer to buffer
+ * @size_r: buffer size
+ * Return: pointer to calling function
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, m, one, two, sum;
+	int overflow = 0, i = 0, j = 0, digits = 0;
+	int val1 = 0, val2 = 0, temp_tot = 0;
 
-	i = j = m = sum = 0;
-	while (n1[i] != '\0')
-	{
+	while (*(n1 + i) != '\0')
 		i++;
-	}
-	while (n2[j] != '\0')
-	{
+	while (*(n2 + j) != '\0')
 		j++;
-	}
-	while (i >= 0 || j >= 0 || sum != 0)
-	{
-		if (i - 1 >= 0)
-			one = (int)n1[i - 1] - 48;
-		else
-			one = 0;
-		if (j - 1 >= 0)
-			two = (int)n2[j - 1] - 48;
-		else
-			two = 0;
-		sum = sum + one + two;
-		r[m] = sum % 10 + '0';
-		if (sum > 9)
-			sum = (sum - (sum % 10)) / 10;
-		else
-			sum = 0;
-		if (m >= size_r - 1)
-			return (0);
-		i--;
-		j--;
-		m++;
-	}
-	if (m == size_r)
+	i--;
+	j--;
+	if (j >= size_r || i >= size_r)
 		return (0);
-	r[m] = '\0';
-	strrev(r);
+	while (j >= 0 || i >= 0 || overflow == 1)
+	{
+		if (i < 0)
+			val1 = 0;
+		else
+			val1 = *(n1 + i) - '0';
+		if (j < 0)
+			val2 = 0;
+		else
+			val2 = *(n2 + j) - '0';
+		temp_tot = val1 + val2 + overflow;
+		if (temp_tot >= 10)
+			overflow = 1;
+		else
+			overflow = 0;
+		if (digits >= (size_r - 1))
+			return (0);
+		*(r + digits) = (temp_tot % 10) + '0';
+		digits++;
+		j--;
+		i--;
+	}
+	if (digits == size_r)
+		return (0);
+	*(r + digits) = '\0';
+	rev_string(r);
 	return (r);
 }
+
