@@ -2,7 +2,7 @@
 
 /**
  * strrev - check code
- * @n: input
+ * @s: input
  * Return: check function declaration
  */
 
