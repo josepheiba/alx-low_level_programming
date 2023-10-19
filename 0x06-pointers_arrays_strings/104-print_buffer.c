@@ -34,9 +34,7 @@ void print_buffer(char *b, int size)
 			if ((c < 32 || c > 132) && i < size)
 				printf(".");
 			else if (i < size)
-				printf("%c", b[i]);
-			else
-                                printf(" ");
+				printf("%c", c);
 		}
 		printf("\n");
 	}
