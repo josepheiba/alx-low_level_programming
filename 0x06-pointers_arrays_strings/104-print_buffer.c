@@ -21,26 +21,22 @@ void print_buffer(char *b, int size)
 		for (; i < k + ten; i++)
 		{
 			if (i < size)
-			{
 				printf("%02x", b[i]);
-			}
 			else
 				printf("  ");
 			if (i % 2)
-			{
 				printf(" ");
-			}
 		}
 		i = k;
 		for (; i < k + ten; i++)
 		{
 			c = b[i];
 			if ((c < 32 || c > 132) && i < size)
-			{
 				printf(".");
-			}
 			else if (i < size)
 				printf("%c", b[i]);
+			else
+                                printf(" ");
 		}
 		printf("\n");
 	}
