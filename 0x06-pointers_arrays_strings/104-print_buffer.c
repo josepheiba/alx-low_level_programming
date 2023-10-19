@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_buffer - check code
+ * print_buffer - done now lets chill
  * @b: input
  * @size: input
  * Return: check function declaration
