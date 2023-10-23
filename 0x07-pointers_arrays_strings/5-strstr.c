@@ -30,8 +30,11 @@ char *_strstr(char *haystack, char *needle)
 			break;
 		}
 		if (oki == 1)
-		break;
+		{
+			return (haystack + i - j + 1);
+			break;
+		}
 	i++;
 	}
-	return (haystack + i - j + 1);
+	return ('\0');
 }
