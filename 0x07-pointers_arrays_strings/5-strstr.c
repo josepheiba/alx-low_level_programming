@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  * _strstr - check code
@@ -10,7 +9,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j;
+	int i, j;
 
 	i = 0;
 	while (haystack[i] != '\0')
@@ -32,5 +31,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 	i++;
 	}
-	return (NULL);
+	return ('\0');
 }
