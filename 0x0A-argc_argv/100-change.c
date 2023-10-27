@@ -10,7 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	unsigned int change;
+	int change;
 	int sum;
 
 	sum = 0;
