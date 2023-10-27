@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * main - check the code
@@ -10,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	unsigned int sum;
-	int i;
+	int i, j, l;
 
 	sum = 0;
 	i = 1;
@@ -18,13 +19,18 @@ int main(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			if (**(argv + i) >= 58 || **(argv + i) <= 47)
+		j = 0;
+		l = strlen(*(argv + i));
+			while (j < l)
 			{
-				printf("Error\n");
-				return (0);
+				if ((*(argv + i))[j] >= 58 || (*(argv + i))[j] <= 47)
+				{
+					printf("Error\n");
+					return (0);
+				}
+			j++;
 			}
-			else
-				sum = sum + _atoi(*(argv + i));
+		sum = sum + _atoi(*(argv + i));
 		i++;
 		}
 		printf("%i\n", sum);
