@@ -16,32 +16,37 @@ int main(int argc, char **argv)
 	sum = 0;
 	if (argc == 2)
 	{
-	change = _atoi(argv[1]);
-	while (change >= 25)
-	{
-		sum++;
-		change -= 25;
-	}
-	while (change >= 10)
-	{
-		sum++;
-		change -= 10;
-	}
-	while (change >= 5)
-	{
-		sum++;
-		change -= 5;
-	}
-	while (change >= 2)
-	{
-		sum++;
-		change -= 2;
-	}
-	while (change >= 1)
-	{
-		sum++;
-		change -= 1;
-	}
+		change = _atoi(argv[1]);
+		if (change < 0)
+		{
+			printf("%i\n", 0);
+			return (0);
+		}
+		while (change >= 25)
+		{
+			sum++;
+			change -= 25;
+		}
+		while (change >= 10)
+		{
+			sum++;
+			change -= 10;
+		}
+		while (change >= 5)
+		{
+			sum++;
+			change -= 5;
+		}
+		while (change >= 2)
+		{
+			sum++;
+			change -= 2;
+		}
+		while (change >= 1)
+		{
+			sum++;
+			change -= 1;
+		}
 		printf("%i\n", sum);
 		return (0);
 	}
