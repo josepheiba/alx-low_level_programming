@@ -12,9 +12,17 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int i, j, k;
 	char *str;
+	char *nu;
+
+	nu = malloc(sizeof(char));
+	*nu = '\0';
 
 	if (s1 == NULL && s2 == NULL)
 		return (0);
+	else if (s1 == NULL)
+		s1 = nu; 
+	else if (s2 == NULL)
+		s2 = nu;
 
 	i = j = 0;
 	while (s1[i] != '\0')
