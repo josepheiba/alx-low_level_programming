@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * wc - check the code.
+ * @s : variable
+ * Return: 0 1
+ */
+
 int wc(char *s)
 {
 	int w, i;
@@ -17,13 +23,12 @@ int wc(char *s)
 			w++;
 		}
 	}
-	return w;
+	return (w);
 }
 
 /**
- * argstostr - check the code.
- * @ac : variable
- * @av : variable
+ * strtow - check the code.
+ * @str : variable
  * Return: 0 1
  */
 
@@ -43,7 +48,7 @@ char **strtow(char *str)
 	i = j = 0;
 	while (i < w)
 	{
-		while(str[j] != '\0')
+		while (str[j] != '\0')
 		{
 			if (str[j] == ' ')
 				j++;
