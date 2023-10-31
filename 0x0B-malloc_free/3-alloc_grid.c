@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * str_concat - check the code.
- * @s1 : variable
- * @s2 : variable
+ * alloc_grid - check the code.
+ * @width : variable
+ * @height : variable
  * Return: 0 1
  */
 
