@@ -12,7 +12,7 @@ int wc(char *s)
 			i++;
 		else
 		{
-			while (s[i] == ' ' && s[i] == '\0')
+			while (s[i] != ' ' && s[i] != '\0')
 				i++;
 			w++;
 		}
@@ -34,10 +34,10 @@ char **strtow(char *str)
 
 	w = wc(str);
 	
-	if (str == NULL || *str == '\0')
+	if (str == NULL)
 		return (NULL);
 
-	s = malloc(w * sizeof(*s));
+	s = malloc(w * sizeof(char *));
 	if (s == NULL)
 		return (NULL);
 
