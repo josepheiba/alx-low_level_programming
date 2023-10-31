@@ -32,10 +32,9 @@ char **strtow(char *str)
 	int w, i, j, k, l;
 	char **s;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-	
 	w = wc(str);
+	if (str == NULL || *str == '\0' || w == 0)
+		return (NULL);
 
 	s = malloc((w + 1) * sizeof(char *));
 	if (s == NULL)
