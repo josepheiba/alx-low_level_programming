@@ -13,6 +13,9 @@ int **alloc_grid(int width, int height)
 	int i;
 	int **grid = calloc(height, sizeof(*grid));
 
+	if (width <= 0 || height <= 0)
+		return (0);
+
 	if (grid == NULL)
 		return (0);
 	i = 0;
