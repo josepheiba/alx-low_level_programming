@@ -2,6 +2,7 @@
 
 /**
  * _realloc - check the code.
+ * @ptr : variable
  * @old_size : variable
  * @new_size : variable
  * Return: 0 1
