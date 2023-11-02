@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdint.h>
 
 /**
  * _calloc - check code.
