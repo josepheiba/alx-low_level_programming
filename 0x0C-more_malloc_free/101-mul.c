@@ -1,99 +1,124 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
- * is_digit - checks if a string contains a non-digit char
- * @s: string to be evaluated
- *
- * Return: 0 if a non-digit is found, 1 otherwise
+ * _error - check code
+ * Return: check function declaration
  */
-int is_digit(char *s)
+
+void _error(void)
 {
-	int i = 0;
-
-	while (s[i])
-	{
-		if (s[i] < '0' || s[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-/**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Return: the length of the string
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * errors - handles errors for main
- */
-void errors(void)
-{
-	printf("Error\n");
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
 	exit(98);
 }
 
 /**
- * main - multiplies two positive numbers
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: always 0 (Success)
+ * _strlen_recursion - check code
+ * @s: input
+ * Return: check function declaration
  */
-int main(int argc, char *argv[])
-{
-	char *s1, *s2;
-	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
-	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
-		errors();
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
-	len = len1 + len2 + 1;
-	result = malloc(sizeof(int) * len);
-	if (!result)
-		return (1);
-	for (i = 0; i <= len1 + len2; i++)
-		result[i] = 0;
-	for (len1 = len1 - 1; len1 >= 0; len1--)
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
+}
+
+/**
+ * _isdigit - check the code.
+ * @c : variable
+ * Return: 0 1
+ */
+
+int _isdigit(char *c)
+{
+	int i = 0;
+
+	while (c[i] != '\0')
 	{
-		digit1 = s1[len1] - '0';
-		carry = 0;
-		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
-		{
-			digit2 = s2[len2] - '0';
-			carry += result[len1 + len2 + 1] + (digit1 * digit2);
-			result[len1 + len2 + 1] = carry % 10;
-			carry /= 10;
-		}
-		if (carry > 0)
-			result[len1 + len2 + 1] += carry;
+		if (c[i] < '0' || c[i] > '9')
+			return (1);
+		i++;
 	}
-	for (i = 0; i < len - 1; i++)
+	return (0);
+}
+
+/**
+ * _print - check the code.
+ * @mul : variable
+ * @l : variable
+ * Return: 0 1
+ */
+
+void _print(int *mul, int l)
+{
+	int x;
+
+	x = 0;
+	while (mul[x] == 0 && x < l - 1)
+		x++;
+	if (x == l - 1)
 	{
-		if (result[i])
-			a = 1;
-		if (a)
-			_putchar(result[i] + '0');
-	}
-	if (!a)
 		_putchar('0');
+		_putchar('\n');
+		return;
+	}
+	for (; x < l - 1; x++)
+	{
+		_putchar(mul[x] + '0');
+	}
+
 	_putchar('\n');
-	free(result);
+}
+
+/**
+ * main - check the code.
+ * @argc : variable
+ * @argv : variable
+ * Return: 0 1
+ */
+
+int main(int argc, char **argv)
+{
+	int x, i, j, nl1, nl2, l, N1, N2, MLT, C;
+	int *mul;
+	char *n1 = *(argv + argc - 1);
+	char *n2 = *(argv + argc - 2);
+
+	if (argc != 3 || _isdigit(n1) || _isdigit(n2))
+		_error();
+	nl1 = _strlen_recursion(n1);
+	nl2 = _strlen_recursion(n2);
+
+	l = nl1 + nl2 + 1;
+	mul = malloc(sizeof(int) * l);
+	if (mul == NULL)
+		return (1);
+
+	while (x <= l)
+	for (x = 0; x <= l; x++)
+		*(mul + x) = 0;
+
+	for (i = nl1 - 1; i >= 0; i--)
+	{
+		N1 = n1[i] - '0';
+		C = 0;
+		for (j = nl2 - 1; j >= 0; j--)
+		{
+			N2 = n2[j] - '0';
+			MLT = N1 * N2;
+			C = C + mul[i + j + 1] + MLT;
+			mul[i + j + 1] = C % 10;
+			C = (C - (C % 10)) / 10;
+		}
+		mul[i + j + 1] += C;
+	}
+	_print(mul, l);
+	free(mul);
 	return (0);
 }
