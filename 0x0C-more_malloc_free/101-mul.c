@@ -47,7 +47,7 @@ void _print(int *mul, int l)
 	x = 0;
 	while (mul[x] == 0)
 		x++;
-	for (; x < l; x++)
+	for (; x < l - 1; x++)
 	{
 		_putchar(mul[x] + '0');
 	}
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
 	nl1 = _strlen_recursion(n1);
 	nl2 = _strlen_recursion(n2);
 
-	l = nl1 + nl2;
+	l = nl1 + nl2 + 1;
 	mul = malloc(sizeof(int) * l);
 	if (mul == NULL)
 		return (1);
