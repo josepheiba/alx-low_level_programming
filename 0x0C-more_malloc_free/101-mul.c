@@ -52,7 +52,6 @@ void _print(int *mul, int l)
 		_putchar(mul[x] + '0');
 	}
 	_putchar('\n');
-	free(mul);
 }
 
 /**
@@ -101,5 +100,6 @@ int main(int argc, char **argv)
 		mul[i + j + 1] += C;
 	}
 	_print(mul, l);
+	free(mul);
 	return (0);
 }
