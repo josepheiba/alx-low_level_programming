@@ -7,6 +7,18 @@
  * Return: check function declaration
  */
 
+void _error(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+
+/**
+ * _strlen_recursion - check code
+ * @s: input
+ * Return: check function declaration
+ */
+
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
@@ -76,10 +88,7 @@ int main(int argc, char **argv)
 	char *n2 = *(argv + argc - 2);
 
 	if (argc != 3 || _isdigit(n1) || _isdigit(n2))
-	{
-		printf("Error\n");
-		exit(98);
-	}
+		_error();
 	nl1 = _strlen_recursion(n1);
 	nl2 = _strlen_recursion(n2);
 
