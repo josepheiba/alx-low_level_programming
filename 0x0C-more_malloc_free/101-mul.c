@@ -42,8 +42,11 @@ int _isdigit(char *c)
 
 void _print(int *mul, int l)
 {
-	int x;
+	int i, a;
 
+	a = 0;
+
+	/**
 	x = 0;
 	while (mul[x] == 0)
 		x++;
@@ -51,6 +54,17 @@ void _print(int *mul, int l)
 	{
 		_putchar(mul[x] + '0');
 	}
+	*/
+
+	for (i = 0; i < l - 1; i++)
+	{
+		if (mul[i])
+			a = 1;
+		if (a)
+			_putchar(mul[i] + '0');
+	}
+	if (!a)
+		_putchar('0');
 	_putchar('\n');
 }
 
