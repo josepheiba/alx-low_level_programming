@@ -65,13 +65,13 @@ void _print(int *mul, int l)
 	x = 0;
 	while (mul[x] == 0 && x < l - 1)
 		x++;
-	if (x == l - 1)
+	if (x == l)
 	{
 		_putchar('0');
 		_putchar('\n');
 		return;
 	}
-	for (; x < l - 1; x++)
+	for (; x < l; x++)
 	{
 		_putchar(mul[x] + '0');
 	}
@@ -93,18 +93,18 @@ int main(int argc, char **argv)
 	char *n1 = *(argv + argc - 1);
 	char *n2 = *(argv + argc - 2);
 
+	x = 0;
 	if (argc != 3 || _isdigit(n1) || _isdigit(n2))
 		_error();
 	nl1 = _strlen_recursion(n1);
 	nl2 = _strlen_recursion(n2);
 
-	l = nl1 + nl2 + 1;
-	mul = malloc(sizeof(int) * l);
+	l = nl1 + nl2;
+	mul = malloc(sizeof(int) * (l + 1));
 	if (mul == NULL)
 		return (1);
 
-	while (x <= l)
-	for (x = 0; x <= l; x++)
+	for (x = 0; x < l; x++)
 		*(mul + x) = 0;
 
 	for (i = nl1 - 1; i >= 0; i--)
