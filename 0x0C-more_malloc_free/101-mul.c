@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 	char *n1 = *(argv + argc - 1);
 	char *n2 = *(argv + argc - 2);
 
-	if (argc != 3 || !_isdigit(n1) || !_isdigit(n2))
+	if (argc != 3 || _isdigit(n1) || _isdigit(n2))
 	{
 		printf("Error\n");
 		exit(98);
