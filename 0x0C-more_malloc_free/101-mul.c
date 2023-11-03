@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strlen_recursion - check code
@@ -9,7 +8,12 @@
 
 void _error(void)
 {
-	printf("Error\n");
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
 	exit(98);
 }
 
