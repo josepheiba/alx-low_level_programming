@@ -45,10 +45,8 @@ void _print(int *mul, int l)
 	int x;
 
 	x = 0;
-	if (mul[x] == 0)
-		x = 1;
-	else
-		x = 0;
+	while (mul[x] == 0)
+		x++;
 	for (; x < l; x++)
 	{
 		_putchar(mul[x] + '0');
