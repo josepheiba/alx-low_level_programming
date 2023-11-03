@@ -14,25 +14,39 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * malloc_checked - check code.
- * @b : variable
+ * string_nconcat - check code
+ * @s1: variable
+ * @s2: variable
+ * @n: variable
  * Return: check declaration
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int l1, l2, x;
+	char *s;
+	unsigned int l1, l2, x, y;
 
 	l1 = _strlen_recursion(s1);
 	l2 = _strlen_recursion(s2);
 
-	if n >= l2
+	if (n >= l2)
 		n = l2;
 
-	char *s = malloc(sizeof(char) * (l1 + n));
-	if (p == NULL)
-		return(NULL);
-	
-
-	return (p);
+	s = malloc(sizeof(char) * (l1 + n));
+	if (s == NULL)
+		return (NULL);
+	x = 0;
+	while (*(s1 + x) != '\0')
+	{
+		*(s + x) = *(s1 + x);
+		x++;
+	}
+	y = 0;
+	while (*(s2 + y) != '\0' && y < n)
+	{
+		*(s + x + y) = *(s2 + y);
+		y++;
+	}
+	*(s + x + y) = '\0';
+	return (s);
 }
