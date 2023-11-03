@@ -26,11 +26,9 @@ int _isdigit(char *c)
 
 	while (c[i] != '\0')
 	{
-		if (c[i] > 47 && c[i] < 58)
-		{
+		if (c[i] < '0' || c[i] > '9')
 			return (1);
-			i++;
-		}
+		i++;
 	}
 	return (0);
 }
@@ -99,7 +97,7 @@ int main(int argc, char **argv)
 			N2 = n2[j] - '0';
 			MLT = N1 * N2;
 			C = C + mul[i + j + 1] + MLT;
-			mul[i + j + 1] = C % 10; 
+			mul[i + j + 1] = C % 10;
 			C = (C - (C % 10)) / 10;
 		}
 		mul[i + j + 1] += C;
