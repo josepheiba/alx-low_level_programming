@@ -13,15 +13,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t dog;
 	dog_t *dogP;
-	
+
 	dogP = &dog;
-	if (dogP != NULL)
+	if (dogP->name == NULL || &(dogP->age) == NULL || dogP->owner == NULL)
+	{
+		return (NULL);
+	}
+	else
 	{
 		dogP->name = name;
 		dogP->age = age;
 		dogP->owner = owner;
 		return (dogP);
 	}
-	else
-		return (NULL);
+
 }
