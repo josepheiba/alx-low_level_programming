@@ -5,9 +5,11 @@
  * struct dog - check the code
  * @name: variable
  * @age: variable
+ * @owner: variable
  */
 
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
