@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
  * new_dog - check code
@@ -11,10 +12,9 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t dog;
 	dog_t *dogP;
 
-	dogP = &dog;
+	dogP = malloc(sizeof(dog_t));
 	if (name == NULL || age < 0 || owner == NULL)
 	{
 		return (NULL);
