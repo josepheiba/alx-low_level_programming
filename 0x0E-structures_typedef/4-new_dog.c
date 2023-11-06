@@ -48,14 +48,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 
+	if (name == NULL || owner == NULL)
+		return (NULL);
+
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	if (name == NULL || owner == NULL)
-	{
-		return (NULL);
-		free(dog);
-	}
 
 	dog->name = malloc(sizeof(char) * _strlen_recursion(name) + 1);
 	if (dog->name == NULL)
