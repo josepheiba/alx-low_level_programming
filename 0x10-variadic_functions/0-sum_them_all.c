@@ -24,5 +24,6 @@ int sum_them_all(const unsigned int n, ...)
 		sum = sum + number;
 		i++;
 	}
+	va_end(ptr);
 	return (sum);
 }
