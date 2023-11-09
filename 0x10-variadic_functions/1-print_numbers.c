@@ -1,21 +1,24 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - check code.
+ * print_numbers - check code.
+ * @separator : variable
  * @n : variable
  * Return: check declaration
  */
 
-int sum_them_all(const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ptr;
-	unsigned int number, sum, i;
+	unsigned int number, i;
+	char *s = "";
 
-	if (n == 0)
-		return (0);
+	if (separator == NULL)
+		separator = s;
 
 	va_start(ptr, n);
 
+	number = n;
 	sum = 0;
 	i = 0;
 	while (i < n)
