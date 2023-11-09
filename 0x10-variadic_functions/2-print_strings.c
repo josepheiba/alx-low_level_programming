@@ -19,7 +19,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	while (i < n)
 	{
 		string = va_arg(ptr, char *);
-		printf("%s", string);
+		if (string != NULL)
+			printf("%s", string);
 		if (separator != NULL && i != n - 1)
 			printf("%s", separator);
 		i++;
