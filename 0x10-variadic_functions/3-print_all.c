@@ -52,12 +52,7 @@ void p_string(va_list ptr)
 {
 	char *c;
 
-	c = va_arg(ptr, char*);
-	if (c == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
+	c = va_arg(ptr, char *);
 	printf("%s", c);
 }
 
