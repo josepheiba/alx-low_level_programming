@@ -1,34 +1,57 @@
 #include "variadic_functions.h"
 
-struct type
-{
-	char *type;
-	void (*f)(va_list ptr);
-};
-
-typedef struct type type_t;
+/**
+ * p_char - code.
+ * @ptr : variable
+ * Return: check declaration
+ */
 
 void p_char(va_list ptr)
 {
 	char c;
+
 	c = va_arg(ptr, int);
 	printf("%c", c);
 }
+
+/**
+ * p_int - code.
+ * @ptr : variable
+ * Return: check declaration
+ */
+
 void p_int(va_list ptr)
 {
 	int c;
+
 	c = va_arg(ptr, int);
 	printf("%i", c);
 }
+
+/**
+ * p_float - check code.
+ * @ptr : variable
+ * Return: check declaration
+ */
+
 void p_float(va_list ptr)
 {
 	float c;
+
 	c = va_arg(ptr, double);
 	printf("%f", c);
 }
+
+/**
+ * p_string - check code.
+ * @ptr : variable
+ * Return: check declaration
+ */
+
 void p_string(va_list ptr)
 {
 	char *c;
+
 	c = va_arg(ptr, char*);
 	printf("%s", c);
 }
