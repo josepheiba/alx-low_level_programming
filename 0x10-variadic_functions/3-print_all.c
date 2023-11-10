@@ -71,6 +71,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ptr;
 	int i, j, l;
+	char *why_2_if = "";
 	type_t types[] = {
 		{"c", p_char},
 		{"i", p_int},
@@ -90,10 +91,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *(types[j].type))
 			{
+				printf("%s", why_2_if);
 				types[j].f(ptr);
-				if (i != l - 1)
-					printf(", ");
-				break;
+				why_2_if = ", ";
 			}
 			j++;
 		}
