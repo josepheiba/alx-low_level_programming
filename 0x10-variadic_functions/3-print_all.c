@@ -70,7 +70,7 @@ void p_string(va_list ptr)
 void print_all(const char * const format, ...)
 {
 	va_list ptr;
-	int i, j;
+	unsigned int i, j;
 	char *why_2_if = "";
 	type_t types[] = {
 		{"c", p_char},
