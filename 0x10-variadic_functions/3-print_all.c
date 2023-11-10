@@ -83,7 +83,7 @@ void print_all(const char * const format, ...)
 
 	i = j = 0;
 
-	while (i < strlen(format) && format != NULL)
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
