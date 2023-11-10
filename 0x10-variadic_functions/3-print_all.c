@@ -53,10 +53,12 @@ void p_string(va_list ptr)
 	char *c;
 
 	c = va_arg(ptr, char *);
-	if (c == NULL)
-		printf("(nil)");
-	else
+	if (c != NULL)
+	{
 		printf("%s", c);
+		return;
+	}
+	printf("(nil)");
 }
 
 /**
