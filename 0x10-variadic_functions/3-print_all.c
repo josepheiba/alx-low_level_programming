@@ -70,7 +70,7 @@ void p_string(va_list ptr)
 void print_all(const char * const format, ...)
 {
 	va_list ptr;
-	int i, j, l;
+	int i, j;
 	char *why_2_if = "";
 	type_t types[] = {
 		{"c", p_char},
@@ -81,10 +81,9 @@ void print_all(const char * const format, ...)
 
 	va_start(ptr, format);
 
-	l = strlen(format);
 	i = j = 0;
 
-	while (i < l)
+	while (i < strlen(format))
 	{
 		j = 0;
 		while (j < 4)
