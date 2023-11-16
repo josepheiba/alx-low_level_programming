@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * print_list - check code.
+ * @h : variable
+ * Return: check declaration
+ */
+
 size_t print_list(const list_t *h)
 {
 	unsigned long sz;
