@@ -1,15 +1,18 @@
 #include "lists.h"
 
 /**
- * add_nodeint - check code.
+ * add_nodeint_end - check code.
  * @head : variable
  * @n : variable
  * Return: check declaration
  */
 
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *node;
+	listint_t *ptr;
+
+	ptr = *head;
 
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
@@ -19,9 +22,13 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	node->next = NULL;
 
 	if (*head != NULL)
-		node->next = *head;
-
-	*head = node;
+	{
+		while (ptr->next != NULL)
+			ptr = ptr->next;
+		ptr->next = node;
+	}
+	else
+		*head = node;
 
 	return (node);
 }
