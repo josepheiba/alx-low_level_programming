@@ -2,7 +2,7 @@
 
 /**
  * free_listint - check code.
- * @h : variable
+ * @head : variable
  * Return: check declaration
  */
 
