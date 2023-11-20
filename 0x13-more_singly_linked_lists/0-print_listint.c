@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - check code.
+ * print_listint - check code.
  * @h : variable
  * Return: check declaration
  */
