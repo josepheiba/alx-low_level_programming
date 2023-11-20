@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * free_listint - check code.
- * @h : variable
+ * free_listint2 - check code.
+ * @head : variable
  * Return: check declaration
  */
 
