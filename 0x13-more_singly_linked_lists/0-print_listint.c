@@ -3,6 +3,7 @@
 /**
  * print_listint - check code.
  * @h : variable
+ *
  * Return: check declaration
  */
 
@@ -10,7 +11,7 @@ size_t print_listint(const listint_t *h)
 {
 	size_t  sz = 0;
 
-	while (h != NULL)
+	while (h)
 	{
 		printf("%d\n", h->n);
 		sz++;
