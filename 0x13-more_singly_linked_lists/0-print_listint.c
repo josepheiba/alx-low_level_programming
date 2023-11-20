@@ -1,23 +1,21 @@
 #include "lists.h"
 
 /**
- * print_listint - check code.
+ * print_list - check code.
  * @h : variable
- *
  * Return: check declaration
  */
 
 size_t print_listint(const listint_t *h)
 {
-	unsigned long i;
+	unsigned long sz;
 
-	i = 0;
+	sz = 0;
 	while (h != NULL)
 	{
-		printf("%d\n", h->n);
-		i++;
+		printf("%i\n", h->n);
 		h = h->next;
+		sz++;
 	}
-
-	return (i);
+	return (sz);
 }
