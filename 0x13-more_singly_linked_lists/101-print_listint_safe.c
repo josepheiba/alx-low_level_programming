@@ -11,7 +11,6 @@ size_t print_listint_safe(const listint_t *head)
 	unsigned long sz, ok, i;
 	const listint_t *h;
 	const listint_t *ptr;
-	const listint_t *nully = NULL;
 
 	if (head == NULL)
 		exit(98);
@@ -22,23 +21,22 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		printf("[%p] %d\n", (void *)h, h->n);
 		sz++;
-		if (h == nully)
-			break;
 		h = h->next;
-		ptr = h;
+		ptr = head;
 		i = 0;
-		while (i < 100 && ok == 0 && ptr != NULL)
+		while (i < sz)
 		{
-			nully = ptr;
-			ptr = ptr->next;
 			if (ptr == h)
+			{
 				ok = 1;
+				printf("-> [%p] %d\n", (void *)h, h->n);
+				return (sz);
+			}
+			ptr = ptr->next;
 			i++;
 		}
-	}
-	if (ok == 1)
-	{
-		printf("-> [%p] %d\n", (void *)nully->next, (nully->next)->n);
+		if (!head)
+			exit(98);
 	}
 	return (sz);
 }
