@@ -31,7 +31,9 @@ size_t print_listint_safe(const listint_t *head)
 			i++;
 		}
 		if (!head)
+		{
 			exit(98);
+		}
 	}
 	return (sz);
 }
