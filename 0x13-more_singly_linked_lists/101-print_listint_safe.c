@@ -5,24 +5,35 @@
  * @head : variable
  * Return: check declaration
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
-    size_t num = 0;
-    long int diff;
+	const listint_t *h = NULL;
+	const listint_t *ptr = NULL;
+	size_t sz = 0;
+	size_t i;
+	
+	if (!head)
+		exit(98);
 
-    while (head)
-    {
-        diff = head - head->next;
-        num++;
-        printf("[%p] %d\n", (void *)head, head->n);
-        if (diff > 0)
-            head = head->next;
-        else
-        {
-            printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-            break;
-        }
-    }
-
-    return (num);
+	h = head;
+	while (h != NULL)
+	{
+		printf("[%p] %d\n", (void *)h, h->n);
+		sz++;
+		h = h->next;
+		ptr = head;
+		i = 0;
+		while (i < sz)
+		{
+			if (ptr == h)
+			{
+				printf("-> [%p] %d\n", (void *)h, h->n);
+				return (sz);
+			}
+			ptr = ptr->next;
+			i++;
+		}
+	}
+	return (sz);
 }
