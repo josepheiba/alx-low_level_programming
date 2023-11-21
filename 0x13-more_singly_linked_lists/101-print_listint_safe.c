@@ -8,11 +8,10 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *h = NULL;
-	const listint_t *ptr = NULL;
-	size_t sz = 0;
-	size_t i;
+	const listint_t *h, *ptr;
+	size_t sz, i;
 
+	sz = 0;
 	h = head;
 	while (h != NULL)
 	{
