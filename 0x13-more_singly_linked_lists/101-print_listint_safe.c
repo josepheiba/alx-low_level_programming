@@ -12,9 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *ptr = NULL;
 	size_t sz = 0;
 	size_t i;
-	
-	if (!head)
-		exit(98);
 
 	h = head;
 	while (h != NULL)
@@ -34,6 +31,8 @@ size_t print_listint_safe(const listint_t *head)
 			ptr = ptr->next;
 			i++;
 		}
+		if (!head)
+			exit(98);
 	}
 	return (sz);
 }
