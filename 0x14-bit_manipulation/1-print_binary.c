@@ -13,8 +13,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-	else
-		print_binary_no_zero(n);
+	print_binary_no_zero(n);
 }
 
 /**
