@@ -10,9 +10,11 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int one, num;
+	int bruh;
 
 	one = 1;
 	n = n >> index;
 	num = n & one;
-	return (num);
+	bruh = num;
+	return (bruh);
 }
