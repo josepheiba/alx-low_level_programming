@@ -38,7 +38,7 @@ int main(int ac, char **av)
 
 	fci = close(fi);
 	if (fci == -1)
-		dprintf(STDERR_FILENO, "Error: Can't closei fd %i\n", fi), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fi), exit(100);
 	fco = close(fo);
 	if (fco == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fo), exit(100);
