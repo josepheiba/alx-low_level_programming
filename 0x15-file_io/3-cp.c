@@ -29,7 +29,7 @@ int main(int ac, char **av)
 	while ((fr = read(fi, bf, 1024)) > 0)
 	{
 		fw = write(fo, bf, fr);
-		if (fw == -1)
+		if (fw != fr)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 
