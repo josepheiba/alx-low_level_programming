@@ -14,7 +14,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_fromi file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -38,7 +38,7 @@ int main(int ac, char **av)
 
 	fci = close(fi);
 	if (fci == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fi), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't closei fd %i\n", fi), exit(100);
 	fco = close(fo);
 	if (fco == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fo), exit(100);
