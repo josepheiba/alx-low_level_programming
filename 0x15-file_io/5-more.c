@@ -1,5 +1,5 @@
 /**
- * read_textfile - check code.
+ * check_elf - check code.
  * @e_ident : variable
  * Return: check declaration
  */
