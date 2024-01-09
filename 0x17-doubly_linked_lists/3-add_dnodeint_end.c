@@ -45,7 +45,7 @@ dlistint_t *find_tail(dlistint_t *head)
 	dlistint_t *tail;
 
 	tail = head;
-	while(tail->next != NULL)
+	while (tail->next != NULL)
 		tail = tail->next;
 	return (tail);
 }
