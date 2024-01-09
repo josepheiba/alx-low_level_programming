@@ -69,8 +69,6 @@ dlistint_t *find_pos(dlistint_t *head, unsigned int idx)
 			return (pos);
 		pos = pos->next;
 		i++;
-		if (i == idx)
-			return (pos);
 	}
 	return (NULL);
 }
