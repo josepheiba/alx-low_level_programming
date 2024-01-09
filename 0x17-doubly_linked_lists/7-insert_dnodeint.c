@@ -29,7 +29,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		pos = find_pos(*h, idx);
 		if (pos == NULL)
-			return (node);
+			return (NULL);
 
 		if (pos->prev == NULL)
 		{
@@ -70,5 +70,5 @@ dlistint_t *find_pos(dlistint_t *head, unsigned int idx)
 		pos = pos->next;
 		i++;
 	}
-	return (NULL);
+	return (pos);
 }
