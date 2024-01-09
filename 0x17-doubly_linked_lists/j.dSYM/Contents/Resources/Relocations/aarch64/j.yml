@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     j
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039DC, symSize: 0xC4 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039DC, symSize: 0xC4 }
+  - { offsetInCU: 0x26, offset: 0xD8, size: 0x8, addend: 0x0, symName: _add_dnodeint, symObjAddr: 0x0, symBinAddr: 0x100003AA0, symSize: 0xD0 }
+  - { offsetInCU: 0x33, offset: 0xE5, size: 0x8, addend: 0x0, symName: _add_dnodeint, symObjAddr: 0x0, symBinAddr: 0x100003AA0, symSize: 0xD0 }
+  - { offsetInCU: 0x26, offset: 0x1A2, size: 0x8, addend: 0x0, symName: _add_dnodeint_end, symObjAddr: 0x0, symBinAddr: 0x100003B70, symSize: 0xD0 }
+  - { offsetInCU: 0x33, offset: 0x1AF, size: 0x8, addend: 0x0, symName: _add_dnodeint_end, symObjAddr: 0x0, symBinAddr: 0x100003B70, symSize: 0xD0 }
+  - { offsetInCU: 0x85, offset: 0x201, size: 0x8, addend: 0x0, symName: _find_tail, symObjAddr: 0xD0, symBinAddr: 0x100003C40, symSize: 0x48 }
+  - { offsetInCU: 0x26, offset: 0x2B0, size: 0x8, addend: 0x0, symName: _print_dlistint, symObjAddr: 0x0, symBinAddr: 0x100003C88, symSize: 0x80 }
+  - { offsetInCU: 0x8A, offset: 0x314, size: 0x8, addend: 0x0, symName: _print_dlistint, symObjAddr: 0x0, symBinAddr: 0x100003C88, symSize: 0x80 }
+  - { offsetInCU: 0x26, offset: 0x3A5, size: 0x8, addend: 0x0, symName: _free_dlistint, symObjAddr: 0x0, symBinAddr: 0x100003D08, symSize: 0x6C }
+  - { offsetInCU: 0x33, offset: 0x3B2, size: 0x8, addend: 0x0, symName: _free_dlistint, symObjAddr: 0x0, symBinAddr: 0x100003D08, symSize: 0x6C }
+  - { offsetInCU: 0x26, offset: 0x453, size: 0x8, addend: 0x0, symName: _insert_dnodeint_at_index, symObjAddr: 0x0, symBinAddr: 0x100003D74, symSize: 0x160 }
+  - { offsetInCU: 0x33, offset: 0x460, size: 0x8, addend: 0x0, symName: _insert_dnodeint_at_index, symObjAddr: 0x0, symBinAddr: 0x100003D74, symSize: 0x160 }
+  - { offsetInCU: 0x93, offset: 0x4C0, size: 0x8, addend: 0x0, symName: _find_pos, symObjAddr: 0x160, symBinAddr: 0x100003ED4, symSize: 0x88 }
+...
