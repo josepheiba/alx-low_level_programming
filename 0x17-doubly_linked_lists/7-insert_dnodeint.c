@@ -10,76 +10,45 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *node;
-	dlistint_t *pos;
+	dlistint_t *temp, *node;
+	unsigned int dex = 1;
 
+	temp = *h;
 	node = malloc(sizeof(dlistint_t));
 	if (node == NULL)
 		return (NULL);
-
 	node->n = n;
-
-	if (*h == NULL && idx == 0)
+	node->prev = NULL;
+	node->next = NULL;
+	if ((*h) == NULL)
 	{
-		node->prev = NULL;
-		node->next = NULL;
-		*h = node;
-	}
-	else
-	{
-		pos = find_pos(h, idx, n);
-		if (pos == NULL)
-			return (NULL);
-
-		if (pos->prev == NULL)
+		if (idx == 0)
 		{
-			node->prev = NULL;
-			node->next = pos;
-			pos->prev = node;
 			*h = node;
+			return (node);
 		}
-		else
-		{
-			node->prev = pos->prev;
-			node->next = pos;
-			pos->prev->next = node;
-			pos->prev = node;
-		}
+		return (NULL);
 	}
-	return (node);
-}
-
-/**
- * find_pos - check the code
- * @head: input
- * @idx: input
- * @n: input
- * Return: check code
- */
-
-dlistint_t *find_pos(dlistint_t **head, unsigned int idx, int n)
-{
-	unsigned int i;
-	dlistint_t *pos;
-
-	i = 0;
-	pos = *head;
-
-	if (i == idx)
-		return (pos);
-
-	while (pos->next != NULL)
+	if (idx == 0)
 	{
-		pos = pos->next;
-		i++;
-		if (i == idx)
-			return (pos);
+		node->next = *h;
+		(*h)->prev = node;
+		*h = node;
+		return (node);
 	}
-	i++;
-	if (i == idx)
+	while (temp->next != NULL && dex != idx)
 	{
-		add_dnodeint_end(head, n);
-		return (pos);
+		temp = temp->next;
+		dex++;
+	}
+	if (dex == idx)
+	{
+		node->prev = temp;
+		node->next = temp->next;
+		if (temp->next != NULL)
+			temp->next->prev = node;
+		temp->next = node;
+		return (node);
 	}
 	return (NULL);
 }
