@@ -2,7 +2,7 @@
 
 /**
  * print_dlistint - check the code
- * @h - input
+ * @h: input
  * Return: check code
  */
 
@@ -14,7 +14,8 @@ size_t print_dlistint(const dlistint_t *h)
 	n = 0;
 	head = (dlistint_t *)h;
 
-	while (head != NULL) {
+	while (head != NULL)
+	{
 		printf("%d\n", head->n);
 		head = head->next;
 		n++;
