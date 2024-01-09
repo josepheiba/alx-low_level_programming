@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - check the code
+ * insert_dnodeint_at_index - check the code
  * @head: input
+ * @idx: input
  * @n: input
  * Return: check code
  */
@@ -39,8 +40,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * find_tail - check the code
+ * find_pos - check the code
  * @head: input
+ * @idx: input
  * Return: check code
  */
 
