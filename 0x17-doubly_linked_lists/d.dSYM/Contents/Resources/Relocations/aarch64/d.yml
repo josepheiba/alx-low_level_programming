@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     d
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D58, symSize: 0x94 }
+  - { offsetInCU: 0x33, offset: 0x33, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003D58, symSize: 0x94 }
+  - { offsetInCU: 0x26, offset: 0xCA, size: 0x8, addend: 0x0, symName: _add_dnodeint_end, symObjAddr: 0x0, symBinAddr: 0x100003DEC, symSize: 0xD0 }
+  - { offsetInCU: 0x33, offset: 0xD7, size: 0x8, addend: 0x0, symName: _add_dnodeint_end, symObjAddr: 0x0, symBinAddr: 0x100003DEC, symSize: 0xD0 }
+  - { offsetInCU: 0x85, offset: 0x129, size: 0x8, addend: 0x0, symName: _find_tail, symObjAddr: 0xD0, symBinAddr: 0x100003EBC, symSize: 0x48 }
+  - { offsetInCU: 0x26, offset: 0x1D8, size: 0x8, addend: 0x0, symName: _print_dlistint, symObjAddr: 0x0, symBinAddr: 0x100003F04, symSize: 0x80 }
+  - { offsetInCU: 0x8A, offset: 0x23C, size: 0x8, addend: 0x0, symName: _print_dlistint, symObjAddr: 0x0, symBinAddr: 0x100003F04, symSize: 0x80 }
+...
