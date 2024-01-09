@@ -2,7 +2,7 @@
 
 /**
  * insert_dnodeint_at_index - check the code
- * @head: input
+ * @h: input
  * @idx: input
  * @n: input
  * Return: check code
