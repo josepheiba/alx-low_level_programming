@@ -53,6 +53,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
  * find_pos - check the code
  * @head: input
  * @idx: input
+ * @n: input
  * Return: check code
  */
 
@@ -66,7 +67,7 @@ dlistint_t *find_pos(dlistint_t **head, unsigned int idx, int n)
 
 	if (i == idx)
 		return (pos);
-	
+
 	while (pos->next != NULL)
 	{
 		pos = pos->next;
@@ -78,6 +79,7 @@ dlistint_t *find_pos(dlistint_t **head, unsigned int idx, int n)
 	if (i == idx)
 	{
 		add_dnodeint_end(head, n);
+		return (pos);
 	}
 	return (NULL);
 }
