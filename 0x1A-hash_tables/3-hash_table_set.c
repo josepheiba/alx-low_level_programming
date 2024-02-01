@@ -1,4 +1,5 @@
 # include "hash_tables.h"
+#include <stdlib.h>
 
 /**
  * hash_table_set - fun
@@ -24,7 +25,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	node->value = malloc(sizeof(char) * strlen(value));
 	if (node->value == 0)
+  {
+    free(node);
 		return (0);
+  }
 
 	node->key = (char *)key;
 	strcpy(node->value, (char *)value);
