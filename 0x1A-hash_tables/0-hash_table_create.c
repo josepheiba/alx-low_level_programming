@@ -13,20 +13,20 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (size <= 0)
 	{
-		return (0);
+		return (NULL);
 	}
 
 	new_table = malloc(sizeof(hash_table_t));
-	if (new_table == 0)
+	if (new_table == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 
 	array = malloc(sizeof(hash_node_t) * size);
-	if (array == 0)
+	if (array == NULL)
 	{
 		free(new_table);
-		return (0);
+		return (NULL);
 	}
 
 	new_table->size = size;
