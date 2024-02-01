@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     d
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C10, symSize: 0x4C }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C10, symSize: 0x4C }
+  - { offsetInCU: 0x26, offset: 0x11A, size: 0x8, addend: 0x0, symName: _hash_table_create, symObjAddr: 0x0, symBinAddr: 0x100003C5C, symSize: 0x108 }
+  - { offsetInCU: 0x33, offset: 0x127, size: 0x8, addend: 0x0, symName: _hash_table_create, symObjAddr: 0x0, symBinAddr: 0x100003C5C, symSize: 0x108 }
+  - { offsetInCU: 0x26, offset: 0x231, size: 0x8, addend: 0x0, symName: _hash_djb2, symObjAddr: 0x0, symBinAddr: 0x100003D64, symSize: 0x60 }
+  - { offsetInCU: 0x33, offset: 0x23E, size: 0x8, addend: 0x0, symName: _hash_djb2, symObjAddr: 0x0, symBinAddr: 0x100003D64, symSize: 0x60 }
+  - { offsetInCU: 0x26, offset: 0x2C7, size: 0x8, addend: 0x0, symName: _key_index, symObjAddr: 0x0, symBinAddr: 0x100003DC4, symSize: 0x44 }
+  - { offsetInCU: 0x33, offset: 0x2D4, size: 0x8, addend: 0x0, symName: _key_index, symObjAddr: 0x0, symBinAddr: 0x100003DC4, symSize: 0x44 }
+  - { offsetInCU: 0x26, offset: 0x35D, size: 0x8, addend: 0x0, symName: _hash_table_set, symObjAddr: 0x0, symBinAddr: 0x100003E08, symSize: 0x15C }
+  - { offsetInCU: 0x46, offset: 0x37D, size: 0x8, addend: 0x0, symName: _hash_table_set, symObjAddr: 0x0, symBinAddr: 0x100003E08, symSize: 0x15C }
+...

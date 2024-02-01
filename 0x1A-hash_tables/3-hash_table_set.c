@@ -1,4 +1,5 @@
 # include "hash_tables.h"
+#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -23,8 +24,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (node == 0)
 		return (0);
 
+	node->value = malloc(sizeof(char) * strlen(value));
+	if (node->value == 0)
+		return (0);
+
 	node->key = (char *)key;
-	strcpy(node->value, value);
+	strcpy(node->value, (char *)value);
 
 	if (ht->array[index] == 0)
 	{
