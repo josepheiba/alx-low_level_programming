@@ -24,11 +24,11 @@ void hash_table_delete(hash_table_t *ht)
 			pointer = ht->array[i];
 			while (pointer != 0)
 			{
-        pointer2 = pointer;
-        free(pointer2->next);
-        free(pointer2->value);
-        free(pointer2);
-        pointer = pointer->next;
+        pointer2 = pointer->next;
+        free(pointer->next);
+        free(pointer->value);
+        free(pointer);
+        pointer = pointer2;
 			}
 		}
 		i++;
