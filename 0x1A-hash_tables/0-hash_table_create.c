@@ -22,7 +22,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	array = malloc(sizeof(hash_node_t *) * size);
 	if (array == 0)
 	{
-		free(new_table);
 		return (0);
 	}
 
