@@ -1,5 +1,6 @@
 # include "hash_tables.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * hash_table_set - fun
@@ -19,26 +20,27 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, ht->size);
 
+	if (ht->array[index] == 0)
+	{
+	}
+
 	node = malloc(sizeof(hash_node_t));
 	if (node == 0)
 		return (0);
 
-	node->value = malloc(sizeof(char) * strlen(value));
-	if (node->value == 0)
+	node->key = strdup(key);
+  if (node->key == 0)
   {
     free(node);
 		return (0);
   }
-
-	node->key = (char *)key;
-	strcpy(node->value, (char *)value);
-
-	if (ht->array[index] == 0)
-	{
-		node->next = 0;
-		ht->array[index] = node;
-		return (1);
-	}
+	node->value = strdup(value);
+  if (node->value == 0)
+  {
+    free(node->key);
+    free(node);
+		return (0);
+  }
 
 	node->next = ht->array[index];
 	ht->array[index] = node;
