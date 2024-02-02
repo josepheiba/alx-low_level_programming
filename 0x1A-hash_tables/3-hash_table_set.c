@@ -21,14 +21,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while(pointer != 0)
 	{
-		if (strcmp(pointer->key, key) == 0)
-		{
-			free(pointer->value);
-			pointer->value = strdup(value);
-			if (pointer->value == 0)
-				return (0);
-			return (1);
-		}
 		pointer = pointer->next;
 	}
 
