@@ -25,7 +25,7 @@ void hash_table_delete(hash_table_t *ht)
 			while (pointer != 0)
 			{
         pointer2 = pointer->next;
-        free(pointer->next);
+        free(pointer->key);
         free(pointer->value);
         free(pointer);
         pointer = pointer2;
