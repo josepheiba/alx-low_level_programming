@@ -21,16 +21,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	while(pointer != 0)
 	{
+		if (strcmp(pointer->key, key) == 0)
+		{
+			free(pointer->value);
+			pointer->value = strdup(value);
+			if (pointer->value == 0)
+				return (0);
+			return (1);
+		}
 		pointer = pointer->next;
 	}
 
 	node = malloc(sizeof(hash_node_t));
 	if (node == 0)
 		return (0);
-
-	node->key = 0;
-	node->value = 0;
-	node->next = 0;
 
 	node->key = strdup(key);
 	if (node->key == 0)
