@@ -10,14 +10,12 @@ all: $(SRC) $(OBJ)
 %.o: %.c
 	$(CC) -c -o $@ $<
 
-clean: $(NAME)
+clean:
 	$(RM) *~ $(NAME)
 
-oclean: $(OBJ)
+oclean:
 	$(RM) $(OBJ)
 
-fclean: $(NAME) $(OBJ)
-	$(RM) *~ $(NAME)
-	$(RM) $(OBJ)
+fclean: clean oclean
 
 re: oclean all
