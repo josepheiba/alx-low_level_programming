@@ -3,8 +3,8 @@ SRC := $(wildcard *.c)
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 
-all: $(SRC:%.c=%)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-% :
-	$(CC) -c $(SRC)
+%.o : %.c
+	$(CC) -c -o $@ $<
